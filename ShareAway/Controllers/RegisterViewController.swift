@@ -41,7 +41,6 @@ class RegisterViewController: UIViewController {
     }
     
     func setupUI() {
-        Utilities.styleTextField(emailField)
     }
     
     @IBAction func onRegistrationButtonPressed(_ sender: Any) {

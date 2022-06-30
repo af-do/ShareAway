@@ -10,6 +10,20 @@ import UIKit
 
 class Utilities {
     
+    static func styleText(_ text: UILabel) {
+        
+        let bottomLine = CALayer()
+        
+        bottomLine.frame = CGRect(x: 0, y: text.frame.height - 2, width: text.frame.width, height: 2)
+        
+        bottomLine.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1).cgColor
+        
+        //text.borderStyle = .none
+        text.layer.addSublayer(bottomLine)
+    }
+    
+    static func styleTitle(_ text: UILabel) {
+    }
     
     static func isPasswordValid(_ password : String) -> Bool {
         

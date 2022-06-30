@@ -12,4 +12,5 @@ struct SharedItem {
     var itemUploadDate: String
     var itemDescription: String
     var itemSharerID: String
+    var imageBase64String: String
 }

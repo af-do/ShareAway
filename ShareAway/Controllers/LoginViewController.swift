@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     }
     
     func setupUI() {
-        Utilities.styleTextField(emailField)
+        Utilities.styleText(titleLabel)
     }
     
     func setupDelegates() {

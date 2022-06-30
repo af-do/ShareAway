@@ -23,7 +23,9 @@
 		DAD01A7A286C6D8A0006A584 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A79286C6D8A0006A584 /* RegisterViewController.swift */; };
 		DAD01A7C286C900B0006A584 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A7B286C900B0006A584 /* ProfileViewController.swift */; };
 		DAD01A7F286CBADC0006A584 /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A7E286CBADC0006A584 /* SharedItem.swift */; };
-		DAD01A81286D8C4A0006A584 /* SharedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A80286D8C490006A584 /* SharedItemTableViewCell.swift */; };
+		DAD01A85286DD7850006A584 /* SharedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A83286DD7850006A584 /* SharedItemTableViewCell.swift */; };
+		DAD01A86286DD7850006A584 /* SharedItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD01A84286DD7850006A584 /* SharedItemTableViewCell.xib */; };
+		DAD01A88286DD9190006A584 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A87286DD9190006A584 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +45,11 @@
 		DAD01A79286C6D8A0006A584 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DAD01A7B286C900B0006A584 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DAD01A7E286CBADC0006A584 /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
-		DAD01A80286D8C490006A584 /* SharedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemTableViewCell.swift; sourceTree = "<group>"; };
+		DAD01A83286DD7850006A584 /* SharedItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemTableViewCell.swift; sourceTree = "<group>"; };
+		DAD01A84286DD7850006A584 /* SharedItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedItemTableViewCell.xib; sourceTree = "<group>"; };
+		DAD01A87286DD9190006A584 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		DAD01A8C286DFE990006A584 /* Arima-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arima-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		DAD01A8D286DFEA50006A584 /* Splash-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Splash-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,8 @@
 		DA1155A82847550300B9F742 /* ShareAway */ = {
 			isa = PBXGroup;
 			children = (
+				DAD01A8B286DFE8D0006A584 /* Fonts */,
+				DAD01A82286DD7790006A584 /* Views */,
 				DAD01A7D286CBABC0006A584 /* Data */,
 				DAD01A74286C62D90006A584 /* Utilities */,
 				DAD01A6F286C5E8F0006A584 /* Controllers */,
@@ -101,6 +109,7 @@
 				DAD01A77286C6D7A0006A584 /* HomeViewController.swift */,
 				DAD01A79286C6D8A0006A584 /* RegisterViewController.swift */,
 				DAD01A7B286C900B0006A584 /* ProfileViewController.swift */,
+				DAD01A87286DD9190006A584 /* UploadViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,9 +126,26 @@
 			isa = PBXGroup;
 			children = (
 				DAD01A7E286CBADC0006A584 /* SharedItem.swift */,
-				DAD01A80286D8C490006A584 /* SharedItemTableViewCell.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		DAD01A82286DD7790006A584 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAD01A83286DD7850006A584 /* SharedItemTableViewCell.swift */,
+				DAD01A84286DD7850006A584 /* SharedItemTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAD01A8B286DFE8D0006A584 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DAD01A8D286DFEA50006A584 /* Splash-Regular.ttf */,
+				DAD01A8C286DFE990006A584 /* Arima-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD01A86286DD7850006A584 /* SharedItemTableViewCell.xib in Resources */,
 				DAD01A67286C3B460006A584 /* GoogleService-Info.plist in Resources */,
 				DA1155B32847550800B9F742 /* Assets.xcassets in Resources */,
 				DAD01A6E286C49060006A584 /* Launch Screen.storyboard in Resources */,
@@ -202,13 +229,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD01A76286C62E80006A584 /* Utilities.swift in Sources */,
+				DAD01A88286DD9190006A584 /* UploadViewController.swift in Sources */,
+				DAD01A85286DD7850006A584 /* SharedItemTableViewCell.swift in Sources */,
 				DAD01A71286C5EF80006A584 /* LoginViewController.swift in Sources */,
 				DA1155AE2847550300B9F742 /* ViewController.swift in Sources */,
 				DAD01A7A286C6D8A0006A584 /* RegisterViewController.swift in Sources */,
 				DAD01A73286C60840006A584 /* ShareViewController.swift in Sources */,
 				DA1155AA2847550300B9F742 /* AppDelegate.swift in Sources */,
 				DAD01A7C286C900B0006A584 /* ProfileViewController.swift in Sources */,
-				DAD01A81286D8C4A0006A584 /* SharedItemTableViewCell.swift in Sources */,
 				DAD01A78286C6D7A0006A584 /* HomeViewController.swift in Sources */,
 				DA1155AC2847550300B9F742 /* SceneDelegate.swift in Sources */,
 				DAD01A7F286CBADC0006A584 /* SharedItem.swift in Sources */,

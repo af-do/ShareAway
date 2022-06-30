@@ -11,18 +11,20 @@ import FirebaseFirestore
 class ShareViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var SharedItemsTableView: UITableView!
-//
-//    @IBOutlet weak var uploadPost: UIButton!
-//
+
     var items = [SharedItem]()
-//
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.SharedItemsTableView.reloadData()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         fetchItems()
 
-        //let nib = UINib(nibName: "PostsTableViewCell" , bundle: nil)
-        SharedItemsTableView.register(SharedItemTableViewCell.self, forCellReuseIdentifier: "SharedItemViewCell")
+        SharedItemsTableView.register(UINib(nibName: SharedItemTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: SharedItemTableViewCell.identifier)
         SharedItemsTableView.delegate = self
         SharedItemsTableView.dataSource = self
     }
@@ -32,29 +34,10 @@ class ShareViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = SharedItemsTableView.dequeueReusableCell(withIdentifier: "SharedItemsTableView", for: indexPath) as! SharedItemTableViewCell
-
-        let db = Firestore.firestore()
-        db.collection("users").whereField("uniqueID", isEqualTo: items[indexPath.row].itemSharerID).getDocuments() { (snapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in snapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-                        let name = document["firstName"] as! String
-                        let lastName = document["lastName"] as! String
-                        let merged = name + " " + lastName
-                        cell.itemName.text = merged
-//                        cell.profileImage.image = LetterAvatarMaker().setUsername(document["name"] as! String).setBackgroundColors([.random()]).build()
-                        //cell.profileImage.setRounded()
-                    }
-                }
-            }
-
-        cell.itemDate.text = items[indexPath.row].itemUploadDate
-        cell.itemDescription.text = items[indexPath.row].itemDescription
-
-        return cell;
+        let cell = SharedItemsTableView.dequeueReusableCell(withIdentifier: SharedItemTableViewCell.identifier, for: indexPath) as! SharedItemTableViewCell
+        cell.delegate = self
+        cell.populate(items[indexPath.row])
+        return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -71,7 +54,7 @@ class ShareViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     return
                 }
                 for document in snap.documents {
-                    let item = SharedItem(itemName: document["itemName"] as! String, itemUploadDate: document["itemUploadDate"] as! String, itemDescription: document["itemDescription"] as! String, itemSharerID: document["itemSharerID"] as! String)
+                    let item = SharedItem(itemName: document["itemName"] as! String, itemUploadDate: document["itemUploadDate"] as! String, itemDescription: document["itemDescription"] as! String, itemSharerID: document["itemSharerID"] as! String, imageBase64String: document["itemImage64Base"] as! String)
                     if (!self.items.contains(where: {$0.itemName == item.itemName})){
                         self.items.append(item)
                     }
@@ -82,5 +65,23 @@ class ShareViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     }
-    
+}
+
+extension ShareViewController: SharedItemTableViewCellDelegate {
+    func sharedItemTableViewCellPressedOnClaim(_ cell: SharedItemTableViewCell, item: SharedItem) {
+        let db = Firestore.firestore()
+        db.collection("users").whereField("uniqueID", isEqualTo: item.itemSharerID).getDocuments() { (snapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in snapshot!.documents {
+                    let phoneNumber = document["phoneNumber"] as? String
+                    let alert = Utilities.createAlert("Seller phone number", phoneNumber ?? "")
+                    self.items.removeAll(where: { $0.itemSharerID == item.itemSharerID && $0.itemName == item.itemName })
+                    self.SharedItemsTableView.reloadData()
+                    self.present(alert, animated: true)
+                }
+            }
+        }
+    }
 }
