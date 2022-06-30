@@ -10,7 +10,6 @@
 		DA1155AA2847550300B9F742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1155A92847550300B9F742 /* AppDelegate.swift */; };
 		DA1155AC2847550300B9F742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1155AB2847550300B9F742 /* SceneDelegate.swift */; };
 		DA1155AE2847550300B9F742 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1155AD2847550300B9F742 /* ViewController.swift */; };
-		DA1155B12847550300B9F742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1155AF2847550300B9F742 /* Main.storyboard */; };
 		DA1155B32847550800B9F742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1155B22847550800B9F742 /* Assets.xcassets */; };
 		DAD01A67286C3B460006A584 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD01A66286C3B460006A584 /* GoogleService-Info.plist */; };
 		DAD01A6A286C3C760006A584 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DAD01A69286C3C760006A584 /* FirebaseAuth */; };
@@ -26,6 +25,10 @@
 		DAD01A85286DD7850006A584 /* SharedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A83286DD7850006A584 /* SharedItemTableViewCell.swift */; };
 		DAD01A86286DD7850006A584 /* SharedItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAD01A84286DD7850006A584 /* SharedItemTableViewCell.xib */; };
 		DAD01A88286DD9190006A584 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A87286DD9190006A584 /* UploadViewController.swift */; };
+		DAD01A8E286E1F040006A584 /* Arima-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAD01A8C286DFE990006A584 /* Arima-VariableFont_wght.ttf */; };
+		DAD01A8F286E1F060006A584 /* Splash-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAD01A8D286DFEA50006A584 /* Splash-Regular.ttf */; };
+		DAD01A92286E227A0006A584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD01A90286E227A0006A584 /* Main.storyboard */; };
+		DAD01A94286E29360006A584 /* wave.png in Resources */ = {isa = PBXBuildFile; fileRef = DAD01A93286E29360006A584 /* wave.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +36,6 @@
 		DA1155A92847550300B9F742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA1155AB2847550300B9F742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DA1155AD2847550300B9F742 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA1155B02847550300B9F742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA1155B22847550800B9F742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA1155B72847550800B9F742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAD01A66286C3B460006A584 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		DAD01A87286DD9190006A584 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		DAD01A8C286DFE990006A584 /* Arima-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arima-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		DAD01A8D286DFEA50006A584 /* Splash-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Splash-Regular.ttf"; sourceTree = "<group>"; };
+		DAD01A91286E227A0006A584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAD01A93286E29360006A584 /* wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wave.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		DA1155A82847550300B9F742 /* ShareAway */ = {
 			isa = PBXGroup;
 			children = (
+				DAD01A95286E293A0006A584 /* Assets */,
 				DAD01A8B286DFE8D0006A584 /* Fonts */,
 				DAD01A82286DD7790006A584 /* Views */,
 				DAD01A7D286CBABC0006A584 /* Data */,
@@ -91,7 +96,7 @@
 				DAD01A6F286C5E8F0006A584 /* Controllers */,
 				DA1155A92847550300B9F742 /* AppDelegate.swift */,
 				DA1155AB2847550300B9F742 /* SceneDelegate.swift */,
-				DA1155AF2847550300B9F742 /* Main.storyboard */,
+				DAD01A90286E227A0006A584 /* Main.storyboard */,
 				DA1155B22847550800B9F742 /* Assets.xcassets */,
 				DA1155B72847550800B9F742 /* Info.plist */,
 				DAD01A66286C3B460006A584 /* GoogleService-Info.plist */,
@@ -146,6 +151,14 @@
 				DAD01A8C286DFE990006A584 /* Arima-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DAD01A95286E293A0006A584 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DAD01A93286E29360006A584 /* wave.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,11 +226,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD01A92286E227A0006A584 /* Main.storyboard in Resources */,
 				DAD01A86286DD7850006A584 /* SharedItemTableViewCell.xib in Resources */,
 				DAD01A67286C3B460006A584 /* GoogleService-Info.plist in Resources */,
 				DA1155B32847550800B9F742 /* Assets.xcassets in Resources */,
 				DAD01A6E286C49060006A584 /* Launch Screen.storyboard in Resources */,
-				DA1155B12847550300B9F742 /* Main.storyboard in Resources */,
+				DAD01A8E286E1F040006A584 /* Arima-VariableFont_wght.ttf in Resources */,
+				DAD01A94286E29360006A584 /* wave.png in Resources */,
+				DAD01A8F286E1F060006A584 /* Splash-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +262,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA1155AF2847550300B9F742 /* Main.storyboard */ = {
+		DAD01A90286E227A0006A584 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DA1155B02847550300B9F742 /* Base */,
+				DAD01A91286E227A0006A584 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -14,10 +14,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Utilities.styleText(nameLabel)
+        Utilities.styleText(phoneNumberLabel)
+        Utilities.styleText(emailLabel)
+        Utilities.styleButton(logoutButton)
+        Utilities.styleTitle(titleLabel)
         
         let uniqueFirebaseID = Auth.auth().currentUser!.uid
         getFirebaseUser(uniqueFirebaseID)

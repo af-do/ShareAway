@@ -21,7 +21,8 @@ class ShareViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         fetchItems()
 
         SharedItemsTableView.register(UINib(nibName: SharedItemTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: SharedItemTableViewCell.identifier)
@@ -54,7 +55,7 @@ class ShareViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     return
                 }
                 for document in snap.documents {
-                    let item = SharedItem(itemName: document["itemName"] as! String, itemUploadDate: document["itemUploadDate"] as! String, itemDescription: document["itemDescription"] as! String, itemSharerID: document["itemSharerID"] as! String, imageBase64String: document["itemImage64Base"] as! String)
+                    let item = SharedItem(itemName: document["itemName"] as? String, itemUploadDate: document["itemUploadDate"] as? String, itemDescription: document["itemDescription"] as? String, itemSharerID: document["itemSharerID"] as? String, imageBase64String: document["itemImage64Base"] as? String)
                     if (!self.items.contains(where: {$0.itemName == item.itemName})){
                         self.items.append(item)
                     }

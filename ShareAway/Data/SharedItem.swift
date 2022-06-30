@@ -8,9 +8,9 @@
 import Foundation
 
 struct SharedItem {
-    var itemName: String
-    var itemUploadDate: String
-    var itemDescription: String
-    var itemSharerID: String
-    var imageBase64String: String
+    var itemName: String?
+    var itemUploadDate: String?
+    var itemDescription: String?
+    var itemSharerID: String?
+    var imageBase64String: String?
 }

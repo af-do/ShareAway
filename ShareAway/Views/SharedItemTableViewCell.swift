@@ -32,8 +32,6 @@ class SharedItemTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func claimButtonPressed(_ sender: Any) {
@@ -49,7 +47,7 @@ class SharedItemTableViewCell: UITableViewCell {
         itemDate.text = item.itemUploadDate
 
         Task.detached {
-            if let data = Data(base64Encoded: item.imageBase64String),
+            if let data = Data(base64Encoded: item.imageBase64String ?? ""),
                let image = UIImage(data: data) {
                 await MainActor.run {
                     self.itemImageView.image = image

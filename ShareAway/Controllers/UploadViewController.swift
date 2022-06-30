@@ -11,11 +11,14 @@ import FirebaseAuth
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemNameField: UITextField!
     @IBOutlet weak var itemDescLabel: UILabel!
     @IBOutlet weak var itemDescField: UITextField!
     @IBOutlet weak var itemImageLabel: UILabel!
+    @IBOutlet weak var itemImageButton: UIButton!
+    @IBOutlet weak var itemShareButton: UIButton!
     
     var selectedImage64Base: String!
     var imagePicker = UIImagePickerController()
@@ -24,8 +27,16 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+        setupUI()
+    }
+    
+    func setupUI() {
+        Utilities.styleTitle(titleLabel)
+        Utilities.styleText(itemNameLabel)
+        Utilities.styleText(itemDescLabel)
+        Utilities.styleText(itemImageLabel)
+        Utilities.styleButton(itemImageButton)
+        Utilities.styleButton(itemShareButton)
     }
     
     @IBAction func onShareButtonPressed(_ sender: Any) {
@@ -77,6 +88,5 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
         
         
         selectedImage64Base = image!.jpegData(compressionQuality: 0.1)?.base64EncodedString()
-        //print("64Base: " + selectedImage64Base)
     }
 }

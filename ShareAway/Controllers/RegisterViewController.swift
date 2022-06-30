@@ -41,6 +41,13 @@ class RegisterViewController: UIViewController {
     }
     
     func setupUI() {
+        Utilities.styleTitle(titleLabel)
+        Utilities.styleText(firstNameLabel)
+        Utilities.styleText(lastNameLabel)
+        Utilities.styleText(phoneNumber)
+        Utilities.styleText(emailLabel)
+        Utilities.styleText(passLabel)
+        Utilities.styleButton(registerButton)
     }
     
     @IBAction func onRegistrationButtonPressed(_ sender: Any) {

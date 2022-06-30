@@ -14,15 +14,31 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupDelegates()
+        
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
     }
     
     func setupUI() {
-        Utilities.styleText(titleLabel)
+        Utilities.styleTitle(titleLabel)
+        Utilities.styleText(emailLabel)
+        Utilities.styleText(passLabel)
+        Utilities.styleButton(loginButton)
+        Utilities.styleButton(registerButton)
+//        let backgroundImage = UIImageView(frame: self.view.bounds)
+//        backgroundImage.image = UIImage(named: "wave.png")
+//        backgroundImage.contentMode = .scaleToFill
+//        backgroundImage.layer.opacity = 0.4
+//        self.view.insertSubview(backgroundImage, at: 0)
     }
     
     func setupDelegates() {
