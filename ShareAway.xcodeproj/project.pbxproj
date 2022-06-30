@@ -22,6 +22,8 @@
 		DAD01A78286C6D7A0006A584 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A77286C6D7A0006A584 /* HomeViewController.swift */; };
 		DAD01A7A286C6D8A0006A584 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A79286C6D8A0006A584 /* RegisterViewController.swift */; };
 		DAD01A7C286C900B0006A584 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A7B286C900B0006A584 /* ProfileViewController.swift */; };
+		DAD01A7F286CBADC0006A584 /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A7E286CBADC0006A584 /* SharedItem.swift */; };
+		DAD01A81286D8C4A0006A584 /* SharedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD01A80286D8C490006A584 /* SharedItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		DAD01A77286C6D7A0006A584 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DAD01A79286C6D8A0006A584 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DAD01A7B286C900B0006A584 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DAD01A7E286CBADC0006A584 /* SharedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
+		DAD01A80286D8C490006A584 /* SharedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +78,11 @@
 		DA1155A82847550300B9F742 /* ShareAway */ = {
 			isa = PBXGroup;
 			children = (
+				DAD01A7D286CBABC0006A584 /* Data */,
 				DAD01A74286C62D90006A584 /* Utilities */,
 				DAD01A6F286C5E8F0006A584 /* Controllers */,
 				DA1155A92847550300B9F742 /* AppDelegate.swift */,
 				DA1155AB2847550300B9F742 /* SceneDelegate.swift */,
-				DA1155AD2847550300B9F742 /* ViewController.swift */,
 				DA1155AF2847550300B9F742 /* Main.storyboard */,
 				DA1155B22847550800B9F742 /* Assets.xcassets */,
 				DA1155B72847550800B9F742 /* Info.plist */,
@@ -91,6 +95,7 @@
 		DAD01A6F286C5E8F0006A584 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DA1155AD2847550300B9F742 /* ViewController.swift */,
 				DAD01A70286C5EF80006A584 /* LoginViewController.swift */,
 				DAD01A72286C60840006A584 /* ShareViewController.swift */,
 				DAD01A77286C6D7A0006A584 /* HomeViewController.swift */,
@@ -106,6 +111,15 @@
 				DAD01A75286C62E80006A584 /* Utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DAD01A7D286CBABC0006A584 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DAD01A7E286CBADC0006A584 /* SharedItem.swift */,
+				DAD01A80286D8C490006A584 /* SharedItemTableViewCell.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,8 +208,10 @@
 				DAD01A73286C60840006A584 /* ShareViewController.swift in Sources */,
 				DA1155AA2847550300B9F742 /* AppDelegate.swift in Sources */,
 				DAD01A7C286C900B0006A584 /* ProfileViewController.swift in Sources */,
+				DAD01A81286D8C4A0006A584 /* SharedItemTableViewCell.swift in Sources */,
 				DAD01A78286C6D7A0006A584 /* HomeViewController.swift in Sources */,
 				DA1155AC2847550300B9F742 /* SceneDelegate.swift in Sources */,
+				DAD01A7F286CBADC0006A584 /* SharedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
